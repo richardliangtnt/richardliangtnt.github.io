@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IoT 基地 | 梁飞</title>
+  <meta name="description" content="基于 RT-Thread 和 ZigBee 的宠物智能监护系统项目展示。">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="IoT 基地 | 梁飞">
+  <meta property="og:description" content="基于 RT-Thread 和 ZigBee 的宠物智能监护系统项目展示。">
+  <meta property="og:image" content="../assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IoT 基地 | 梁飞">
+  <meta name="twitter:description" content="基于 RT-Thread 和 ZigBee 的宠物智能监护系统项目展示。">
+  <meta name="twitter:image" content="../assets/img/og-image.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">FL</span><span>梁飞</span></a>
+      <div class="nav-links">
+        <a href="../index.html#research">研究</a>
+        <a href="../index.html#projects">项目</a>
+        <a href="../index.html#map">地图</a>
+        <a href="../index.html#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page project-page">
+    <section class="project-hero">
+      <p class="eyebrow">IoT 基地</p>
+      <h1>宠物智能监护系统</h1>
+      <p>基于 <span class="notranslate" translate="no">RT-Thread</span> 与 <span class="notranslate" translate="no">ZigBee</span> 的 <span class="notranslate" translate="no">IoT</span> 监测系统，支持宠物环境感知、远程喂食、设备控制和 <span class="notranslate" translate="no">Web/App</span> 联动。</p>
+	  <p>该项目获得第15届中国大学生计算机设计大赛省级一等奖、全国三等奖。</p>
+      <div class="hero-actions">
+        <a class="secondary-action" href="../index.html#map">返回地图</a>
+      </div>
+    </section>
+
+    <div class="project-layout">
+      <div>
+        <section class="content-block">
+          <h2>项目概览</h2>
+          <p>系统通过多类传感器采集宠物生活环境数据，经 <span class="notranslate" translate="no">ZigBee</span>、网关和云平台传输，并支持 <span class="notranslate" translate="no">Web/App</span> 端远程监测与控制。</p>
+          <p>功能覆盖环境监测、阈值报警、历史数据、视频监控，以及喂食、喂水、通风、补光和声光报警等执行器控制。</p>
+        </section>
+
+        <section class="content-block">
+          <h2>我的贡献</h2>
+          <ul>
+            <li>担任项目负责人和核心实现者。</li>
+            <li>负责硬件组装、接线和整体联调。</li>
+            <li>接入气体、光照、温湿度、继电器、水泵、风扇、喂食等传感器和执行器模块。</li>
+            <li>负责程序烧写、测试、系统演示，以及 <span class="notranslate" translate="no">Web/App</span> 联动调试。</li>
+            <li>文档主要由其他成员整理。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>技术组成</h2>
+          <ul>
+            <li><span class="notranslate" translate="no">RT-Thread</span> / 嵌入式板卡环境。</li>
+            <li><span class="notranslate" translate="no">ZigBee</span> 无线通信与网关转发。</li>
+            <li>智云平台数据采集与转发。</li>
+            <li>Android/Web 端实时监测与控制界面。</li>
+            <li>传感器：温度、湿度、二氧化碳、氨气、甲烷、硫化氢、光照。</li>
+            <li>执行器：风扇、遮光帘、喂食、喂水、水泵、继电器、报警设备。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>Web 与控制界面</h2>
+          <p>Web 端覆盖实时监测、设备控制、视频监控和历史数据查询，能够把传感器数据、摄像头画面和执行器控制集中到一个界面中。</p>
+          <div class="media-grid interface-gallery">
+            <figure class="media-wide">
+              <img src="../assets/img/pet-web-monitor.png" alt="宠物智能监护系统 Web 实时监测界面">
+              <figcaption>实时监测：温湿度、PM2.5、二氧化碳、氨气、甲烷、硫化氢和光照度等传感器数据。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pet-web-control.png" alt="宠物智能监护系统 Web 实时控制界面">
+              <figcaption>实时控制：风扇、喂食、喂水、遮光帘、暖灯和声光报警等执行器开关。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pet-web-camera.png" alt="宠物智能监护系统 Web 视频监控界面">
+              <figcaption>视频监控：IP 摄像头画面与方向控制，用于远程查看宠物状态。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pet-web-history-chart.png" alt="宠物智能监护系统 Web 历史曲线界面">
+              <figcaption>历史曲线：按传感器维度查看环境数据变化趋势。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pet-web-history-table.png" alt="宠物智能监护系统 Web 历史表格界面">
+              <figcaption>历史表格：按时间查询关键传感器采样记录。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>硬件原型</h2>
+          <div class="media-grid">
+            <figure>
+              <img src="../assets/img/pet-front.png" alt="宠物智能监护硬件原型正面图">
+              <figcaption>硬件原型正面。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/pet-side.png" alt="宠物智能监护硬件原型侧面图">
+              <figcaption>硬件原型侧面。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>代码公开说明</h2>
+          <p>该项目代码可以公开。正式发布前，需要移除账号凭据、设备 ID、云平台密钥、摄像头账号和私有服务地址。</p>
+          <div class="code-list">
+            <code>app and web / PIMS20220430-web</code>
+            <code>hardware code / temperature-humidity sensor</code>
+            <code>hardware code / CO2, ammonia, methane, H2S sensors</code>
+            <code>hardware code / relay and coordinator modules</code>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-panel">
+        <div class="project-card">
+          <strong>状态</strong>
+          <p>已完成竞赛项目。代码清理后可以公开。</p>
+        </div>
+        <div class="project-card">
+          <strong>角色</strong>
+          <p>项目负责人和核心实现者。</p>
+        </div>
+        <div class="project-card">
+          <strong>材料证明</strong>
+          <p>本地已有开发文档、源码文件夹、设备照片、APK/Web 文件和演示视频。</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="../assets/js/main.js?v=20260509-polish"></script>
+</body>
+</html>

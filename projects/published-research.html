@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>已发表研究室 | 梁飞</title>
+  <meta name="description" content="已发表 VRPTW 研究展示：学习、路径多样性和启发式优化相关内容。">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="已发表研究室 | 梁飞">
+  <meta property="og:description" content="已发表 VRPTW 研究展示：学习、路径多样性和启发式优化相关内容。">
+  <meta property="og:image" content="../assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="已发表研究室 | 梁飞">
+  <meta name="twitter:description" content="已发表 VRPTW 研究展示：学习、路径多样性和启发式优化相关内容。">
+  <meta name="twitter:image" content="../assets/img/og-image.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">FL</span><span>梁飞</span></a>
+      <div class="nav-links">
+        <a href="../index.html#research">研究</a>
+        <a href="../index.html#projects">项目</a>
+        <a href="../index.html#map">地图</a>
+        <a href="../index.html#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page project-page">
+    <section class="project-hero">
+      <p class="eyebrow">已发表研究室</p>
+      <h1><span class="notranslate" translate="no">Synergistic design for VRPTW</span></h1>
+      <p>面向带时间窗车辆路径问题，设计基于路径多样性指标与自适应邻域搜索的竞争群优化方法。</p>
+      <div class="hero-actions">
+        <a class="primary-action" href="https://www.aimspress.com/article/doi/10.3934/era.2026116">打开期刊页面</a>
+        <a class="secondary-action" href="../index.html#map">返回地图</a>
+      </div>
+    </section>
+
+    <div class="project-layout">
+      <div>
+        <section class="content-block">
+          <h2>研究概览</h2>
+          <p>这项研究关注带时间窗车辆路径问题（<span class="notranslate" translate="no">VRPTW</span>），这是物流配送和交通运输系统中的经典 <span class="notranslate" translate="no">NP-hard</span> 组合优化问题。</p>
+          <p>提出的 <span class="notranslate" translate="no">CSO-TS</span> 方法将竞争群优化、禁忌搜索、自适应邻域操作和路径多样性指标结合起来，用于平衡全局探索与局部开发。</p>
+        </section>
+
+        <section class="content-block">
+          <h2>公开亮点</h2>
+          <ul>
+            <li>发表于 Electronic Research Archive。</li>
+            <li>该期刊收录于 <span class="notranslate" translate="no">SCIE</span>，属于美国 <span class="notranslate" translate="no">JCR Q1</span> 分区。</li>
+            <li>DOI：10.3934/era.2026116。</li>
+            <li>在 56 个 Solomon benchmark 实例上测试。</li>
+            <li>获得 23 个最优解。</li>
+            <li>与 9 个先进算法进行对比，并表现出有竞争力的解质量。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>方法概述</h2>
+          <ul>
+            <li>将竞争群优化思想适配到离散 <span class="notranslate" translate="no">VRPTW</span> 搜索中。</li>
+            <li>引入禁忌搜索机制进行局部精修。</li>
+            <li>设计自适应邻域操作策略。</li>
+            <li>利用多种路径差异信号构建路径多样性指标。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>论文图示</h2>
+          <p>这些图来自已发表论文，用来快速展示方法流程、问题建模和 Solomon benchmark 上的路径结果。</p>
+          <div class="paper-gallery">
+            <figure class="paper-feature">
+              <img src="../assets/img/era-flowchart-original.png" alt="CSO-TS 算法流程图">
+              <figcaption>算法流程图：展示 <span class="notranslate" translate="no">CSO-TS</span> 从种群初始化、竞争更新到禁忌搜索精修的整体流程。</figcaption>
+            </figure>
+            <figure class="paper-feature">
+              <img src="../assets/img/era-schematic-original.png" alt="VRPTW 车辆路径问题示意图">
+              <figcaption>问题示意图：用车辆、客户节点与路径关系直观说明 <span class="notranslate" translate="no">VRPTW</span> 场景。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/era-route-r101.png" alt="R101 实例路径结果">
+              <figcaption>R101 路径结果：展示算法在 R 类实例中的车辆路径组织。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/era-route-c101.png" alt="C101 实例路径结果">
+              <figcaption>C101 路径结果：展示聚类客户分布下的路径构造效果。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/era-route-rc201.png" alt="RC201 实例路径结果">
+              <figcaption>RC201 路径结果：展示混合客户分布与较长路线约束下的求解效果。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/era-route-c204.png" alt="C204 实例路径结果">
+              <figcaption>C204 路径结果：用于补充展示不同 benchmark 实例中的路径形态。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>引用信息</h2>
+          <code class="citation">Liang, F., Yu, F., Wu, H., Lan, S., Chen, Y., and Xia, X. Synergistic design for VRPTW: A competitive swarm optimizer guided by path diversity index and adaptive neighborhood search. Electronic Research Archive, 34(4): 2511-2538. DOI: 10.3934/era.2026116.</code>
+        </section>
+      </div>
+
+      <aside class="side-panel">
+        <div class="project-card">
+          <strong>状态</strong>
+          <p>已发表，2026-03-23</p>
+        </div>
+        <div class="project-card">
+          <strong>关键词</strong>
+          <div class="tag-row">
+            <span class="tag notranslate" translate="no">VRPTW</span>
+            <span class="tag notranslate" translate="no">SCIE</span>
+            <span class="tag notranslate" translate="no">JCR Q1</span>
+            <span class="tag notranslate" translate="no">CSO</span>
+            <span class="tag notranslate" translate="no">Tabu Search</span>
+            <span class="tag notranslate" translate="no">Path Diversity</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <strong>来源</strong>
+          <p>公开期刊页面与本地 ERA PDF 文本抽取。</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="../assets/js/main.js?v=20260509-polish"></script>
+</body>
+</html>

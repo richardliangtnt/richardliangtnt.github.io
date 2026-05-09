@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>交通车库 | 梁飞</title>
+  <meta name="description" content="ROS 智能小车项目展示，覆盖 SLAM、导航、路径规划和轨迹跟踪。">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="交通车库 | 梁飞">
+  <meta property="og:description" content="ROS 智能小车项目展示，覆盖 SLAM、导航、路径规划和轨迹跟踪。">
+  <meta property="og:image" content="../assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="交通车库 | 梁飞">
+  <meta name="twitter:description" content="ROS 智能小车项目展示，覆盖 SLAM、导航、路径规划和轨迹跟踪。">
+  <meta name="twitter:image" content="../assets/img/og-image.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">FL</span><span>梁飞</span></a>
+      <div class="nav-links">
+        <a href="../index.html#research">研究</a>
+        <a href="../index.html#projects">项目</a>
+        <a href="../index.html#map">地图</a>
+        <a href="../index.html#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page project-page">
+    <section class="project-hero">
+      <p class="eyebrow">交通车库</p>
+      <h1>智慧交通系统与 <span class="notranslate" translate="no">ROS</span> 智能小车</h1>
+      <p>一个机器人与智慧交通方向项目，覆盖 <span class="notranslate" translate="no">ROS</span> 导航、激光雷达建图、路径规划、定位和路径执行。</p>
+      <div class="hero-actions">
+        <a class="secondary-action" href="../index.html#map">返回地图</a>
+      </div>
+    </section>
+
+    <div class="project-layout">
+      <div>
+        <section class="content-block">
+          <h2>项目概览</h2>
+          <p>下载的材料包含一套结构化的智慧城市实验内容，围绕自主导航、路径规划、精准定位和车辆调度任务展开。</p>
+          <p>该项目可以展示 <span class="notranslate" translate="no">ROS</span> 工作流、仿真/实验组织、导航栈配置，以及基于 <span class="notranslate" translate="no">Python</span> 的路径规划逻辑。</p>
+        </section>
+
+        <section class="content-block">
+          <h2>模块拆解</h2>
+          <ul>
+            <li>自主导航：激光雷达建图和激光雷达导航实验。</li>
+            <li>路径规划：电子地图、路径规划和路径执行模块。</li>
+            <li>精准定位：雷达定位和轨迹跟踪相关脚本。</li>
+            <li>车辆调度：智慧交通场景下的任务级调度材料。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>代码证据</h2>
+          <div class="code-list">
+            <code>mbot_navigation / launch / gmapping.launch</code>
+            <code>mbot_navigation / launch / move_base.launch</code>
+            <code>map / map.py, map_path.py, showmap.py</code>
+            <code>aicar_test / script / tracking / pure_pursuit.py</code>
+            <code>aicar_test / script / tracking / mpc.py</code>
+            <code>aicar_test / script / tracking / stanley_controller.py</code>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>展示素材</h2>
+          <div class="media-grid">
+            <figure>
+              <img src="../assets/img/traffic-map.jpg" alt="智慧交通电子地图">
+              <figcaption>路径规划材料中的电子地图资源。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/traffic-path.png" alt="路径规划路线示意图">
+              <figcaption>路径规划模块中的路线示意图。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>代码公开说明</h2>
+          <p>该项目代码可以公开。正式发布前，建议清理或分离生成文件、冗余第三方包、二进制文件和机器相关配置。</p>
+        </section>
+      </div>
+
+      <aside class="side-panel">
+        <div class="project-card">
+          <strong>状态</strong>
+          <p>已有实验项目。代码清理后可以公开。</p>
+        </div>
+        <div class="project-card">
+          <strong>技术栈</strong>
+          <div class="tag-row">
+            <span class="tag notranslate" translate="no">ROS</span>
+            <span class="tag notranslate" translate="no">SLAM</span>
+            <span class="tag notranslate" translate="no">Python</span>
+            <span class="tag">Path Planning</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <strong>作品集价值</strong>
+          <p>展示机器人实验流程、路径规划实践和 <span class="notranslate" translate="no">Python</span> 项目结构。</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="../assets/js/main.js?v=20260509-polish"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D 项目小镇预览 | 梁飞</title>
+  <meta name="description" content="梁飞个人作品集的 3D 项目地图预览页。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3D 项目小镇预览 | 梁飞">
+  <meta property="og:description" content="梁飞个人作品集的 3D 项目地图预览页。">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="3D 项目小镇预览 | 梁飞">
+  <meta name="twitter:description" content="梁飞个人作品集的 3D 项目地图预览页。">
+  <meta name="twitter:image" content="assets/img/og-image.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">FL</span>
+        <span>梁飞</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#map">返回 2.5D 地图</a>
+        <a href="index.html#projects">项目</a>
+        <a href="index.html#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page preview-page">
+    <section class="project-hero preview-hero">
+      <p class="eyebrow">3D Preview</p>
+      <h1>3D 作品小镇预览</h1>
+      <p>这是一个独立预览页，用来测试真正 <span class="notranslate" translate="no">3D</span> 风格是否适合放进主页。拖动可旋转视角，滚轮缩放，<span class="notranslate" translate="no">WASD</span> / 方向键移动小车，点击建筑查看项目。</p>
+    </section>
+
+    <section class="three-preview-shell">
+      <div class="three-preview-toolbar">
+        <div>
+          <strong><span class="notranslate" translate="no">Three.js</span> 项目地图</strong>
+          <span>鼠标拖动旋转视角，滚轮缩放，点击建筑查看详情。</span>
+        </div>
+        <a class="button-link" href="index.html">回到当前首页</a>
+      </div>
+      <div class="three-stage" data-three-stage>
+        <div class="three-label-layer" data-three-labels></div>
+        <aside class="three-project-card" data-three-card>
+          <div class="tag-row" data-three-tags></div>
+          <h2 data-three-title>已发表研究室</h2>
+          <p data-three-summary></p>
+          <p><strong>状态：</strong><span data-three-status></span></p>
+          <a class="primary-action" data-three-link href="projects/published-research.html">查看详情</a>
+        </aside>
+        <div class="three-loading" data-three-loading>正在加载 3D 场景...</div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/three-preview.js"></script>
+</body>
+</html>
