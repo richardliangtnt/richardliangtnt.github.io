@@ -49,6 +49,38 @@
         </section>
 
         <section class="content-block">
+          <h2>工作流程</h2>
+          <p>页面重点展示一个可解释的 <span class="notranslate" translate="no">RAG</span> 链路：先把文档变成可检索片段，再把检索结果作为回答依据，而不是直接让模型凭空回答。</p>
+          <div class="flow-strip" aria-label="RAG 文档问答工作流程">
+            <div class="flow-step">
+              <strong>01</strong>
+              <span>上传文档</span>
+              <p><span class="notranslate" translate="no">txt / md / pdf</span></p>
+            </div>
+            <div class="flow-step">
+              <strong>02</strong>
+              <span>解析切块</span>
+              <p>按段落和长度切分</p>
+            </div>
+            <div class="flow-step">
+              <strong>03</strong>
+              <span>候选召回</span>
+              <p><span class="notranslate" translate="no">TF-IDF n-gram</span></p>
+            </div>
+            <div class="flow-step">
+              <strong>04</strong>
+              <span>语义增强</span>
+              <p>改写、摘要、重排</p>
+            </div>
+            <div class="flow-step">
+              <strong>05</strong>
+              <span>生成回答</span>
+              <p>展示引用和来源</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-block">
           <h2>核心能力</h2>
           <ul>
             <li>上传并解析 <span class="notranslate" translate="no">txt</span>、<span class="notranslate" translate="no">md</span>、<span class="notranslate" translate="no">pdf</span> 文档。</li>
@@ -66,6 +98,23 @@
               <img src="../assets/img/rag-app-preview.png" alt="RAG 文档问答系统 Streamlit 界面预览">
               <figcaption><span class="notranslate" translate="no">Streamlit</span> 应用界面：文档上传、索引构建、提问、回答和参考片段展示。</figcaption>
             </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>问答效果示例</h2>
+          <div class="qa-showcase">
+            <div class="qa-panel">
+              <span class="tag blue">用户问题</span>
+              <p>这份实习记录里提到了哪些与 <span class="notranslate" translate="no">Python</span>、数据处理或工程实践相关的内容？</p>
+            </div>
+            <div class="qa-panel">
+              <span class="tag green">系统回答</span>
+              <p>系统会先召回与问题最相关的片段，再基于片段总结回答，并列出来源文件、片段相似度和引用内容，方便检查回答依据。</p>
+            </div>
+          </div>
+          <div class="citation">
+            示例引用片段：来源文件、相似度分数和原文片段会在回答下方展开，帮助判断模型回答是否真正来自上传文档。
           </div>
         </section>
 
@@ -104,6 +153,20 @@
         <div class="project-card">
           <strong>公开边界</strong>
           <p>不提交真实 API Key、环境变量文件、虚拟环境和本地缓存。</p>
+        </div>
+        <div class="project-card">
+          <strong>技术标签</strong>
+          <div class="tag-row">
+            <span class="tag notranslate" translate="no">Python</span>
+            <span class="tag notranslate" translate="no">Streamlit</span>
+            <span class="tag notranslate" translate="no">RAG</span>
+            <span class="tag notranslate" translate="no">TF-IDF</span>
+            <span class="tag notranslate" translate="no">DeepSeek</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <strong>仓库入口</strong>
+          <p><a class="text-link" href="https://github.com/Richardliangtnt/rag-doc-qa" target="_blank" rel="noreferrer">打开 GitHub 项目</a></p>
         </div>
       </aside>
     </div>
