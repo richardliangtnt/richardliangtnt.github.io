@@ -29,10 +29,10 @@ const projects = {
   },
   python: {
     title: 'Python 工作室',
-    summary: '后续用于放置数据分析和机器学习项目。第一版先诚实标记为建设中。',
-    tags: ['Python', '数据分析', '建设中'],
-    status: '规划中',
-    link: '#contact'
+    summary: 'RAG 文档问答项目：上传文档、构建轻量检索索引，并结合 DeepSeek API 生成可追溯回答。',
+    tags: ['Python', 'Streamlit', 'RAG'],
+    status: '代码可公开',
+    link: 'projects/rag-doc-qa.html'
   }
 };
 

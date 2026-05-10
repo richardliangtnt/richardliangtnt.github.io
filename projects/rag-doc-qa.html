@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG 文档问答系统 | 梁飞</title>
+  <meta name="description" content="基于 Python、Streamlit 和 DeepSeek API 的轻量级 RAG 文档问答项目展示。">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="RAG 文档问答系统 | 梁飞">
+  <meta property="og:description" content="上传文档、构建轻量检索索引，并结合 DeepSeek API 生成带参考片段的回答。">
+  <meta property="og:image" content="../assets/img/rag-app-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RAG 文档问答系统 | 梁飞">
+  <meta name="twitter:description" content="基于 Python、Streamlit 和 DeepSeek API 的轻量级 RAG 文档问答项目展示。">
+  <meta name="twitter:image" content="../assets/img/rag-app-preview.png">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="../index.html"><span class="brand-mark">FL</span><span>梁飞</span></a>
+      <div class="nav-links">
+        <a href="../index.html#research">研究</a>
+        <a href="../index.html#projects">项目</a>
+        <a href="../index.html#map">地图</a>
+        <a href="../index.html#contact">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page project-page">
+    <section class="project-hero">
+      <p class="eyebrow"><span class="notranslate" translate="no">Python</span> 工作室</p>
+      <h1><span class="notranslate" translate="no">RAG</span> 文档问答系统</h1>
+      <p>一个基于 <span class="notranslate" translate="no">Python</span>、<span class="notranslate" translate="no">Streamlit</span> 和 <span class="notranslate" translate="no">DeepSeek API</span> 的轻量级文档问答应用，适合作为 AI 应用开发作品集展示。</p>
+      <div class="hero-actions">
+        <a class="primary-action" href="https://github.com/Richardliangtnt/rag-doc-qa" target="_blank" rel="noreferrer">查看 GitHub 仓库</a>
+        <a class="secondary-action" href="../index.html#map">返回地图</a>
+      </div>
+    </section>
+
+    <div class="project-layout">
+      <div>
+        <section class="content-block">
+          <h2>项目概览</h2>
+          <p>项目支持上传 <span class="notranslate" translate="no">txt</span>、<span class="notranslate" translate="no">md</span>、<span class="notranslate" translate="no">pdf</span> 文档，自动完成文本抽取、分块、索引构建和相似片段检索。用户提问后，系统会召回相关片段，并在配置 API Key 时调用 <span class="notranslate" translate="no">DeepSeek</span> 生成回答。</p>
+          <p>即使没有配置大模型接口，也可以展示文档解析、切块、检索和参考片段，方便演示完整的 <span class="notranslate" translate="no">RAG</span> 工作流。</p>
+        </section>
+
+        <section class="content-block">
+          <h2>核心能力</h2>
+          <ul>
+            <li>上传并解析 <span class="notranslate" translate="no">txt</span>、<span class="notranslate" translate="no">md</span>、<span class="notranslate" translate="no">pdf</span> 文档。</li>
+            <li>按段落和字符长度进行带重叠的文本切块。</li>
+            <li>使用字符 <span class="notranslate" translate="no">n-gram</span> 与英文词级 <span class="notranslate" translate="no">n-gram</span> 的混合 <span class="notranslate" translate="no">TF-IDF</span> 建立轻量检索索引。</li>
+            <li>支持 <span class="notranslate" translate="no">DeepSeek</span> 语义索引增强、跨语言查询改写和候选片段重排。</li>
+            <li>展示回答、引用片段、相似度、来源文件和检索过程，便于解释与调试。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>界面预览</h2>
+          <div class="media-grid">
+            <figure class="media-wide">
+              <img src="../assets/img/rag-app-preview.png" alt="RAG 文档问答系统 Streamlit 界面预览">
+              <figcaption><span class="notranslate" translate="no">Streamlit</span> 应用界面：文档上传、索引构建、提问、回答和参考片段展示。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>技术组成</h2>
+          <ul>
+            <li><span class="notranslate" translate="no">Python</span> 负责文档解析、切块、检索和 API 调用流程。</li>
+            <li><span class="notranslate" translate="no">Streamlit</span> 构建可交互 Web 界面。</li>
+            <li><span class="notranslate" translate="no">scikit-learn</span> 的 <span class="notranslate" translate="no">TfidfVectorizer</span> 用于轻量候选召回。</li>
+            <li><span class="notranslate" translate="no">DeepSeek Chat Completions API</span> 用于语义增强、查询改写、重排和回答生成。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>运行方式</h2>
+          <div class="code-list">
+            <code>git clone https://github.com/Richardliangtnt/rag-doc-qa.git</code>
+            <code>cd rag-doc-qa</code>
+            <code>python -m venv .venv</code>
+            <code>.\.venv\Scripts\Activate.ps1</code>
+            <code>pip install -r requirements.txt</code>
+            <code>streamlit run app.py</code>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-panel">
+        <div class="project-card">
+          <strong>状态</strong>
+          <p>代码可公开，已准备作为独立 GitHub 仓库发布。</p>
+        </div>
+        <div class="project-card">
+          <strong>方向</strong>
+          <p><span class="notranslate" translate="no">RAG</span>、文档问答、AI 应用开发、可解释检索。</p>
+        </div>
+        <div class="project-card">
+          <strong>公开边界</strong>
+          <p>不提交真实 API Key、环境变量文件、虚拟环境和本地缓存。</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script src="../assets/js/main.js?v=20260510-rag"></script>
+</body>
+</html>
