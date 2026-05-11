@@ -21,9 +21,9 @@ const projects = {
     link: 'projects/iot-base.html'
   },
   traffic: {
-    title: '交通车库',
-    summary: 'ROS 智能小车项目，覆盖 SLAM、激光雷达导航、定位、路径规划和轨迹跟踪。',
-    tags: ['ROS', 'SLAM', '路径规划'],
+    title: '机器人车库',
+    summary: '移动机器人视觉识别与自主抓取系统，融合 ROS 小车导航、YOLO 药品识别、RealSense 三维定位和 MoveIt 机械臂抓取。',
+    tags: ['ROS', 'YOLO', 'MoveIt'],
     status: '代码可公开',
     link: 'projects/traffic-garage.html'
   },

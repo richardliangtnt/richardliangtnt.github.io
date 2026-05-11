@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>交通车库 | 梁飞</title>
-  <meta name="description" content="ROS 智能小车项目展示，覆盖 SLAM、导航、路径规划和轨迹跟踪。">
+  <title>移动机器人视觉识别与自主抓取系统 | 梁飞</title>
+  <meta name="description" content="基于 ROS 智能小车、RealSense 深度相机、YOLOv3-tiny 和 MoveIt 的移动机器人视觉识别与自主抓取项目展示。">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="交通车库 | 梁飞">
-  <meta property="og:description" content="ROS 智能小车项目展示，覆盖 SLAM、导航、路径规划和轨迹跟踪。">
-  <meta property="og:image" content="../assets/img/og-image.png">
+  <meta property="og:title" content="移动机器人视觉识别与自主抓取系统 | 梁飞">
+  <meta property="og:description" content="融合 ROS 小车导航、YOLO 药品识别、RealSense 三维定位和五自由度机械臂抓取。">
+  <meta property="og:image" content="../assets/img/robot-arm-grasping.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="交通车库 | 梁飞">
-  <meta name="twitter:description" content="ROS 智能小车项目展示，覆盖 SLAM、导航、路径规划和轨迹跟踪。">
-  <meta name="twitter:image" content="../assets/img/og-image.png">
+  <meta name="twitter:title" content="移动机器人视觉识别与自主抓取系统 | 梁飞">
+  <meta name="twitter:description" content="基于 ROS 智能小车、RealSense 深度相机、YOLOv3-tiny 和 MoveIt 的机器人系统集成项目。">
+  <meta name="twitter:image" content="../assets/img/robot-arm-grasping.png">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
@@ -31,9 +31,9 @@
 
   <main class="page project-page">
     <section class="project-hero">
-      <p class="eyebrow">交通车库</p>
-      <h1>智慧交通系统与 <span class="notranslate" translate="no">ROS</span> 智能小车</h1>
-      <p>一个机器人与智慧交通方向项目，覆盖 <span class="notranslate" translate="no">ROS</span> 导航、激光雷达建图、路径规划、定位和路径执行。</p>
+      <p class="eyebrow">机器人车库</p>
+      <h1>移动机器人视觉识别与自主抓取系统</h1>
+      <p>基于 <span class="notranslate" translate="no">ROS</span> 智能小车、<span class="notranslate" translate="no">RealSense</span> 深度相机和五自由度机械臂，完成“路径导航 - 药品识别 - 三维定位 - 机械臂抓取”的自动化药房任务闭环。</p>
       <div class="hero-actions">
         <a class="secondary-action" href="../index.html#map">返回地图</a>
       </div>
@@ -43,73 +43,149 @@
       <div>
         <section class="content-block">
           <h2>项目概览</h2>
-          <p>下载的材料包含一套结构化的智慧城市实验内容，围绕自主导航、路径规划、精准定位和车辆调度任务展开。</p>
-          <p>该项目可以展示 <span class="notranslate" translate="no">ROS</span> 工作流、仿真/实验组织、导航栈配置，以及基于 <span class="notranslate" translate="no">Python</span> 的路径规划逻辑。</p>
+          <p>该项目来自本科毕业设计《基于机器视觉的机械臂智能抓取设计》，并与实习阶段的 <span class="notranslate" translate="no">ROS</span> 智能小车导航、路径规划和智慧交通实验材料相互衔接。</p>
+          <p>系统面向自动化药房场景：移动底盘负责导航到任务区域，视觉模块识别目标药盒，深度相机计算三维位置，机械臂完成抓取、释放和复位。</p>
         </section>
 
         <section class="content-block">
-          <h2>模块拆解</h2>
-          <ul>
-            <li>自主导航：激光雷达建图和激光雷达导航实验。</li>
-            <li>路径规划：电子地图、路径规划和路径执行模块。</li>
-            <li>精准定位：雷达定位和轨迹跟踪相关脚本。</li>
-            <li>车辆调度：智慧交通场景下的任务级调度材料。</li>
-          </ul>
-        </section>
-
-        <section class="content-block">
-          <h2>代码证据</h2>
-          <div class="code-list">
-            <code>mbot_navigation / launch / gmapping.launch</code>
-            <code>mbot_navigation / launch / move_base.launch</code>
-            <code>map / map.py, map_path.py, showmap.py</code>
-            <code>aicar_test / script / tracking / pure_pursuit.py</code>
-            <code>aicar_test / script / tracking / mpc.py</code>
-            <code>aicar_test / script / tracking / stanley_controller.py</code>
+          <h2>任务流程</h2>
+          <div class="flow-strip" aria-label="移动机器人视觉抓取任务流程">
+            <div class="flow-step">
+              <strong>01</strong>
+              <span>地图导航</span>
+              <p><span class="notranslate" translate="no">ROS</span> 小车路径执行</p>
+            </div>
+            <div class="flow-step">
+              <strong>02</strong>
+              <span>视觉识别</span>
+              <p><span class="notranslate" translate="no">YOLOv3-tiny / RKNN</span></p>
+            </div>
+            <div class="flow-step">
+              <strong>03</strong>
+              <span>三维定位</span>
+              <p><span class="notranslate" translate="no">RealSense RGB-D</span></p>
+            </div>
+            <div class="flow-step">
+              <strong>04</strong>
+              <span>轨迹规划</span>
+              <p><span class="notranslate" translate="no">MoveIt / IK</span></p>
+            </div>
+            <div class="flow-step">
+              <strong>05</strong>
+              <span>抓取验证</span>
+              <p>夹爪控制与复位</p>
+            </div>
           </div>
         </section>
 
         <section class="content-block">
-          <h2>展示素材</h2>
+          <h2>系统组成</h2>
+          <ul>
+            <li>移动底盘：<span class="notranslate" translate="no">ROS</span> 智能小车，承载地图导航、路径执行、交通标志识别和任务点调度。</li>
+            <li>视觉模块：使用 <span class="notranslate" translate="no">OpenCV</span> 采集图像，使用 <span class="notranslate" translate="no">labelImg</span> 标注药品数据，基于 <span class="notranslate" translate="no">YOLOv3-tiny / RKNN</span> 完成 4 类药品检测。</li>
+            <li>定位模块：<span class="notranslate" translate="no">RealSense</span> 深度相机输出 424 × 240 深度/彩色图像，将检测框中心点转换为相机坐标系三维坐标。</li>
+            <li>抓取模块：基于 <span class="notranslate" translate="no">MoveIt</span>、逆运动学和轨迹过滤生成抓取姿态，完成夹爪开合、抓取、释放和复位。</li>
+          </ul>
+        </section>
+
+        <section class="content-block">
+          <h2>视觉识别与抓取结果</h2>
+          <p>实验中通过图像标注、模型测试、深度定位和夹爪角度调参，在演示环境下将药品识别准确率提升至接近 100%，抓取成功率提升至约 80%。</p>
           <div class="media-grid">
             <figure>
-              <img src="../assets/img/traffic-map.jpg" alt="智慧交通电子地图">
-              <figcaption>路径规划材料中的电子地图资源。</figcaption>
+              <img src="../assets/img/robot-detection-result.png" alt="药品目标检测结果截图">
+              <figcaption>药品目标检测：红色框为模型预测边界框，包含类别与置信度。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/robot-arm-reaching.png" alt="机械臂移动到药品位置">
+              <figcaption>机械臂到达目标区域：根据深度相机坐标与规划结果移动到抓取位置。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/robot-arm-grasping.png" alt="机械臂抓取药品">
+              <figcaption>抓取验证：五自由度机械臂抓起目标药品。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/robot-platform-front.png" alt="智能小车和机械臂硬件平台">
+              <figcaption>硬件平台：移动底盘、机械臂、摄像头和边缘计算单元组成实验系统。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>导航与路径材料</h2>
+          <p>原始材料中包含地图、路径点、路径跟踪和智慧交通任务逻辑。路径执行部分可与抓取任务结合，用于把机器人移动到目标货架或取药点。</p>
+          <div class="media-grid">
+            <figure>
+              <img src="../assets/img/robot-traffic-map.png" alt="智慧交通实验地图">
+              <figcaption>智慧交通实验地图：用于小车路径规划、路径执行和任务点调度。</figcaption>
             </figure>
             <figure>
               <img src="../assets/img/traffic-path.png" alt="路径规划路线示意图">
-              <figcaption>路径规划模块中的路线示意图。</figcaption>
+              <figcaption>路径规划路线示意：展示导航任务中的路径连接和执行过程。</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>代码证据</h2>
+          <p>项目材料中可见机器人调试程序包含 60 个 Python 脚本/模块，覆盖地图路径、目标检测、交通标志识别、路径跟踪、串口通信、WebSocket 通信和机械臂控制。</p>
+          <div class="code-list">
+            <code>bcar / script / locObj.py：RealSense 深度相机、目标三维坐标计算和多帧稳定检测</code>
+            <code>bcar / script / obj_detection_rk1808 / pill_detection.py：4 类药品检测与 RKNN 推理</code>
+            <code>bcar / script / trafficsign_rk1808 / light_detection.py：交通标志识别</code>
+            <code>bcar / script / tracking / pure_pursuit.py、mpc.py、stanley_controller.py：路径跟踪控制</code>
+            <code>bcar / script / map / map_path.py：地图路径、取放点和路径执行逻辑</code>
+            <code>bcar / launch / grasp_filter_test.launch：MoveIt 抓取姿态过滤与 IK 配置</code>
+          </div>
+        </section>
+
+        <section class="content-block">
+          <h2>模型与通信流程</h2>
+          <div class="media-grid">
+            <figure>
+              <img src="../assets/img/robot-yolo-training-flow.png" alt="YOLO 药品识别模型训练流程">
+              <figcaption>目标检测模型训练流程：图像采集、标注、数据转换与模型训练。</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/img/robot-ros-architecture.png" alt="ROS 系统架构图">
+              <figcaption><span class="notranslate" translate="no">ROS</span> 架构：节点、通信机制和系统运行层次。</figcaption>
             </figure>
           </div>
         </section>
 
         <section class="content-block">
           <h2>代码公开说明</h2>
-          <p>该项目代码可以公开。正式发布前，建议清理或分离生成文件、冗余第三方包、二进制文件和机器相关配置。</p>
+          <p>该项目代码可以公开。正式发布前，需要清理生成文件、冗余第三方包、模型二进制、机器相关配置和较大的视频素材。</p>
         </section>
       </div>
 
       <aside class="side-panel">
         <div class="project-card">
           <strong>状态</strong>
-          <p>已有实验项目。代码清理后可以公开。</p>
+          <p>已有毕业设计论文、答辩 PPT、演示视频、代码目录和硬件/检测/抓取截图。</p>
         </div>
         <div class="project-card">
           <strong>技术栈</strong>
           <div class="tag-row">
             <span class="tag notranslate" translate="no">ROS</span>
-            <span class="tag notranslate" translate="no">SLAM</span>
             <span class="tag notranslate" translate="no">Python</span>
-            <span class="tag">Path Planning</span>
+            <span class="tag notranslate" translate="no">YOLOv3-tiny</span>
+            <span class="tag notranslate" translate="no">RKNN</span>
+            <span class="tag notranslate" translate="no">RealSense</span>
+            <span class="tag notranslate" translate="no">MoveIt</span>
           </div>
         </div>
         <div class="project-card">
-          <strong>作品集价值</strong>
-          <p>展示机器人实验流程、路径规划实践和 <span class="notranslate" translate="no">Python</span> 项目结构。</p>
+          <strong>可量化材料</strong>
+          <p>60 个 Python 脚本/模块、4 类药品检测、424 × 240 RGB-D 图像、连续 5 帧稳定检测。</p>
+        </div>
+        <div class="project-card">
+          <strong>项目价值</strong>
+          <p>从单一小车导航扩展为移动机器人系统集成项目，更能体现视觉、定位、规划和执行闭环。</p>
         </div>
       </aside>
     </div>
   </main>
-  <script src="../assets/js/main.js?v=20260509-polish"></script>
+  <script src="../assets/js/main.js?v=20260511-robot"></script>
 </body>
 </html>
