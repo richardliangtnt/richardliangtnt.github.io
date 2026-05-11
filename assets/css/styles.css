@@ -1301,6 +1301,28 @@ h1 {
   font-size: 13px;
 }
 
+.project-media-gallery figure {
+  background: #fff;
+}
+
+.project-media-gallery a {
+  display: block;
+  background: #fff;
+}
+
+.project-media-gallery img {
+  height: 240px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-media-gallery figure:hover img {
+  transform: none;
+  filter: saturate(1.04) contrast(1.02);
+}
+
 .figure-stack figure {
   overflow-x: auto;
   background: #fff;
