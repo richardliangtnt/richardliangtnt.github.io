@@ -29,7 +29,7 @@ const projects = {
   },
   python: {
     title: 'Python 工作室',
-    summary: 'RAG 文档问答项目：上传文档、构建轻量检索索引，并结合 DeepSeek API 生成可追溯回答。',
+    summary: 'RAG 文档问答项目：上传文档、构建轻量检索索引，并结合智谱 API 生成可追溯回答。',
     tags: ['Python', 'Streamlit', 'RAG'],
     status: '代码可公开',
     link: 'projects/rag-doc-qa.html'
